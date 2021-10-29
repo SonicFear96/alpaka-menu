@@ -7,7 +7,8 @@
 
 /* 
 tablet-width: 768px;
-desktop-width: 1440px;
+desktop-width: 1024px;
+desktop-big-width: 1440px;
 mobile-width-only: 767px;
 iPhone 8 :376px */
 
@@ -25,6 +26,32 @@ iPhone 8 :376px */
 .nav__sub-menu,
 .sub-menu__sub {
   list-style: none;
+}
+
+.telephone-container__number {
+  color: var(--basic-white);
+}
+
+@media (min-width: 768px) {
+  .contact__telephone-container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__container {
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav__main-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 /*MAIN*/
