@@ -12,6 +12,26 @@ desktop-big-width: 1440px;
 mobile-width-only: 767px;
 iPhone 8 :376px */
 
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*HEADER*/
 .main__header {
   background-color: var(--basic-black);
@@ -19,19 +39,100 @@ iPhone 8 :376px */
   width: 100%;
 }
 
-.nav__main-menu {
-  color: var(--basic-white);
+.logo__img {
+  margin: 17px 0 17px 0;
 }
 .nav__main-menu,
 .nav__sub-menu,
 .sub-menu__sub {
   list-style: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.telephone-container__number {
+.nav__toggle {
+  /* position: absolute; */
+  position: relative;
+  right: 2px;
+  top: 10px;
+  bottom: 0;
+  width: 60px;
+  height: 55px;
+  cursor: pointer;
+  border: 0;
+  background: 0 0;
+}
+
+.nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 24px;
+  height: 2px;
+  background-color: #f2994a;
+  box-shadow: 0 9px 0 0 #f2994a, 0 18px 0 0 #f2994a;
+}
+
+.menu-item {
+  padding: 28px 20px 28px 20px;
+}
+.menu-item a {
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
   color: var(--basic-white);
 }
 
+.menu-item a:hover {
+  color: var(--text-hover);
+}
+
+.header__contact {
+  padding: 28px 0 28px 0;
+}
+
+.telephone-container__img {
+  padding: 8px 10px 8px 0;
+}
+.telephone-container__number {
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+.telephone-container__number:hover {
+  color: var(--text-hover);
+}
+
+@media (max-width: 767px) {
+  .nav__toggle {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background: wheat;
+    border: wheat;
+  }
+  .header__nav {
+    position: fixed;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    top: 0;
+    background-color: var(--basic-black);
+  }
+  .nav__main-menu {
+    display: block;
+  }
+
+  .telephone-container__number {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .contact__telephone-container {
     display: flex;
@@ -40,11 +141,15 @@ iPhone 8 :376px */
 }
 
 @media (min-width: 1024px) {
+  /* .nav__toggle {
+    display: none;
+  } */
   .header__container {
     font-family: "Roboto";
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0 5% 0 5%;
   }
   .nav__main-menu {
     margin: 0;
