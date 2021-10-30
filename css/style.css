@@ -14,7 +14,8 @@ mobile-width-only: 767px;
 iPhone 8 :376px */
 
 html,
-body {
+body,
+main {
   height: 100%;
   box-sizing: border-box;
 }
@@ -199,8 +200,9 @@ body {
 
 .main__container {
   width: 100%;
-  height: 944px;
+  height: 100%;
   background-image: url(../img/alpaca.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-x: center;
 }
