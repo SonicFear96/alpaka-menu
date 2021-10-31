@@ -87,6 +87,22 @@ main {
   color: var(--basic-white);
 }
 
+.sub-used::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  top: 15px;
+  margin-left: 10px;
+  border: 6px solid transparent;
+  border-bottom: 7px solid var(--basic-orange);
+}
+
+.sub-used:hover:after {
+  border-bottom: 0;
+  top: 28px;
+  border-top: 7px solid var(--basic-orange);
+}
+
 .nav__toggle {
   margin-top: 20px;
   position: relative;
@@ -171,20 +187,6 @@ main {
     top: 0;
     background-color: var(--basic-black);
   }
-  /* .used-submenu::after {
-    content: "";
-    position: absolute;
-    height: 8px;
-    left: 43%;
-    top: 23%;
-    border: 6px solid transparent;
-    border-bottom: 7px solid var(--basic-orange);
-  }
-  .used-submenu:hover:after {
-    border-bottom: 0;
-    top: 9%;
-    border-top: 7px solid var(--basic-orange);
-  } */
 }
 
 @media (max-width: 1023px) {
@@ -244,24 +246,53 @@ main {
   }
 
   .menu-item {
-    padding: 28px 20px 28px 20px;
+    padding: 28px 35px 28px 20px;
   }
   .menu-item a:hover {
     color: var(--text-hover);
   }
-  .nav__sub-menu {
-    display: block;
+
+  .sub-used::after {
+    content: "";
     position: absolute;
+    height: 8px;
+    top: -5px;
+    margin-left: 6px;
+    border: 6px solid transparent;
+    border-bottom: 7px solid var(--basic-orange);
+  }
+
+  .active .sub-used:hover:after {
+    border-bottom: 0;
+    top: 10px;
+    border-top: 7px solid var(--basic-orange);
+  }
+
+  /*sub-menu after*/
+
+  .sub-item .sub-used::after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    right: 15px;
+    top: 3px;
+  }
+
+  .active .sub-item .sub-used:hover:after {
+    height: 1px;
+    border: 6px solid transparent;
+    border-left: 7px solid var(--basic-orange);
+    top: 13px;
+  }
+
+  .nav__sub-menu {
+    display: none;
+    position: absolute;
+    width: 320px;
     width: 320px;
     top: 80px;
   }
-  .nav__sub-menu {
-    display: block;
-    position: absolute;
-    width: 320px;
-    width: 320px;
-    top: 80px;
-  }
+
   /*submenu - first level*/
   .nav__sub-menu::before {
     content: "";
@@ -287,7 +318,10 @@ main {
 
   .sub-link {
     max-height: 40px;
-    padding: 8px 20px 8px 20px;
+    padding: 8px 38px 8px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .menu-item .sub-item:hover {
     background-color: var(--basic-black);
@@ -308,10 +342,12 @@ main {
     transform: rotate(45deg);
   }
   .sub-menu__sub {
+    display: none;
     position: absolute;
-    bottom: 20px;
-    left: 350px;
+    bottom: 0;
+    left: 345px;
   }
+
   .sub__sub-item {
     width: 179px;
     padding: 0;
