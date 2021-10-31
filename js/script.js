@@ -7,3 +7,4 @@ navToggle.addEventListener("click", function () {
 
 const usedSubMenu = document.querySelector(".used-submenu");
 const firstSubMenu = document.querySelector(".nav__sub-menu");
+const secodnSubMenu = document.querySelector(".sub-menu__sub");
