@@ -4,9 +4,11 @@ const usedSubMenu = document.querySelector(".used-submenu");
 const usedSubMenuSub = document.querySelector(".used-sub-submenu");
 const firstSubMenu = document.querySelector(".nav__sub-menu");
 const secondSubMenu = document.querySelector(".sub-menu__sub");
+const container = document.querySelector(".main__container")
 
 navToggle.addEventListener("click", function () {
   navMain.classList.toggle("display-toggle");
+  container.classList.toggle("container__menu-active");
 });
 /*MOBILE AND TABLET */
 usedSubMenu.addEventListener("click", function () {
