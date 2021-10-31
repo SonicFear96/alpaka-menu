@@ -334,7 +334,7 @@ main {
   .sub-menu__sub::before {
     content: "";
     position: absolute;
-    left: -8px;
+    left: 31px;
     top: 45px;
     width: 28px;
     height: 28px;
@@ -344,8 +344,9 @@ main {
   .sub-menu__sub {
     display: none;
     position: absolute;
+    padding: 0 0 0 40px;
     bottom: 0;
-    left: 345px;
+    left: 310px;
   }
 
   .sub__sub-item {

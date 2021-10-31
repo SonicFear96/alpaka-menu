@@ -27,7 +27,6 @@ usedSubMenu
   .querySelector(".menu-link")
   .addEventListener("mouseenter", function () {
     if (document.documentElement.clientWidth > 1023) {
-      console.log("мышка навелась");
       firstSubMenu.classList.add("active");
       usedSubMenu.classList.add("active");
     }
@@ -35,9 +34,8 @@ usedSubMenu
 
 usedSubMenu.addEventListener("mouseleave", function () {
   if (document.documentElement.clientWidth > 1023) {
-    console.log("мышка навелась");
     firstSubMenu.classList.remove("active");
-    usedSubMenu.classList.add("active");
+    usedSubMenu.classList.remove("active");
   }
 });
 
@@ -45,7 +43,6 @@ usedSubMenuSub
   .querySelector(".menu-link")
   .addEventListener("mouseenter", function () {
     if (document.documentElement.clientWidth > 1023) {
-      console.log("мышка навелась");
       secondSubMenu.classList.add("active");
       usedSubMenu.classList.add("active");
     }
@@ -53,8 +50,7 @@ usedSubMenuSub
 
 usedSubMenuSub.addEventListener("mouseleave", function () {
   if (document.documentElement.clientWidth > 1023) {
-    console.log("мышка навелась");
     secondSubMenu.classList.remove("active");
-    usedSubMenu.classList.add("active");
+    usedSubMenu.classList.remove("active");
   }
 });
