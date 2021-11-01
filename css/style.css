@@ -67,12 +67,11 @@ main {
   background-color: var(--basic-black);
 }
 .header__logo {
+  margin: 17px 0 17px 0;
   width: 46px;
   height: 46px;
 }
-.logo__img {
-  margin: 17px 0 17px 0;
-}
+
 .nav__main-menu,
 .nav__sub-menu,
 .sub-menu__sub {
